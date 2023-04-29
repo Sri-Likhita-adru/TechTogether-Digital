@@ -69,26 +69,22 @@ export default function Navbar() {
                         <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Home</span>
                     </Link>
 
-                    <Link to="/buyitems">
-                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Buy Items</span>
+                    <Link to="/jobs">
+                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Jobs</span>
                     </Link>
 
-                    <Link to="/sellitems">
-                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Sell Items</span>
+                    <Link to="/postjobs">
+                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Post Jobs</span>
                     </Link>
 
-                    <Link to="/donate">
-                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Donate</span>
+                    <Link to="/chat">
+                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Chat</span>
                     </Link>
                 </div>
 
                 <button className="flex items-center space-x-5 md:flex w-40 pl-2 rounded-xl bg-tertiary text-white" onClick={connected ? handleDisconnectWallet : handleConnectWallet}>
                     {connected ? `Disconnect Wallet` : "Connect Wallet"}
                 </button>
-
-                {/* <button className="flex items-center space-x-5 md:flex w-40 pl-2 rounded-xl bg-tertiary text-white">
-                    Connect Wallet
-                </button> */}
 
             </div>
         </div>
