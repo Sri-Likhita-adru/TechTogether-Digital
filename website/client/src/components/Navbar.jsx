@@ -73,13 +73,14 @@ export default function Navbar() {
                         <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Jobs</span>
                     </Link>
 
-                    <Link to="/postjobs">
-                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Post Jobs</span>
-                    </Link>
-
                     <Link to="/chat">
                         <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Chat</span>
                     </Link>
+
+                    <Link to="/profile">
+                        <span className="inline-flex w-auto px-3 py-2 rounded hover:bg-tertiary cursor-pointer text-white">Profile</span>
+                    </Link>
+                    
                 </div>
 
                 <button className="flex items-center space-x-5 md:flex w-40 pl-2 rounded-xl bg-tertiary text-white" onClick={connected ? handleDisconnectWallet : handleConnectWallet}>
