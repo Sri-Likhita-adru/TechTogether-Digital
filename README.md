@@ -36,5 +36,7 @@ To run blockchain networks, we use **Azure Blockchain Service**. Azure Blockchai
 - A Chatroom to chat with other people of marginalized gender
 
 ## 📖 What we learned
+- Difficulties faced by workers of marginalized genders at their work places
+- How google calculates star ratings of reviews and also successfully implemented the same
 
 ## 🚀 What's next for Vite + React
