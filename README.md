@@ -51,5 +51,5 @@ To run blockchain networks, we use **Azure Blockchain Service**. Azure Blockchai
 
 ## 🚀 What's next for Quareer
 
-- Improve AI recommendation system.
+- Upgrade to a more accurate recommendation systems
 - Add more features to job filter page.
