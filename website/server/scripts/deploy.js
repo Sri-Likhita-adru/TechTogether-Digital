@@ -5,23 +5,23 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
+import console from 'console';
+
+const _metadataUri = 'https://gateway.pinata.cloud/ipfs/https://gateway.pinata.cloud/ipfs/QmX2ubjyypAYw75Wrpv6HLb1fhbJqxrnbhDo1RViW3oVoi';
+
+const AzureBlockchainStorage = artifacts.require('AzureBlockchainStorage');
+
+module.exports = (deployer) => {
+    deployer.deploy(AzureBlockchainStorage);
+};
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const unlockTime = currentTimestampInSeconds + 60;
+  const [admin] = await ethers.getSigners();
+  
+  console.log(`Deploying a smart contract...`);
 
-  const lockedAmount = hre.ethers.utils.parseEther("0.001");
+  const techtogether = (await deploy('techtogether', _metadataUri)).connect(admin);
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
-
-  await lock.deployed();
-
-  console.log(
-    `Lock with ${ethers.utils.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
